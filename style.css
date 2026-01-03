@@ -1,398 +1,232 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Bebas Neue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
-
-#class-1 {
-    display: none;
-}
-
 
 .all {
-    margin: 0 100px;
-    margin-bottom: 100px;
+  margin: 0 5%;
+  margin-bottom: 100px;
 }
 
-/* hero section */
+/* Header / Hero */
 #header-1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 
 #header_container {
-    background-color: rgba(250, 235, 215, 0.76);
-    display: flex;
-    padding-top: 60px;
-
-    justify-content: space-between;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 0;
-    border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 60px 50px 40px;
+  background: rgba(250,235,215,0.76);
+  border-radius: 10px;
 }
 
 .header_content h1 {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 85px;
-    margin-bottom: 30px;
+  font-size: 4em;
+  margin-bottom: 20px;
 }
 
 .header_content p {
-    font-size: 20px;
-    margin-bottom: 10px;
-
+  font-size: 1em;
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 .p_2 {
-    font-weight: bolder;
-    color: rgb(199, 136, 65);
-    padding-top: 25px;
-    font-size: 30px;
-    margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: rgb(199,136,65);
+  margin-bottom: 10px;
 }
 
 .btn_1 {
-    padding: 15px 25px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(199, 136, 65);
-    color: white;
-    cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: rgb(199,136,65);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+.btn_1:hover {
+  background: rgb(180,120,50);
+}
 
 /* Categories */
-
 .Categories_p {
-    /* Used for the 'Shoes' section header in the new HTML */
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 30px;
+  margin: 50px 0 20px;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 .Categories_container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
 }
 
-/* General style for all category cards */
-.Categories_container>div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    padding: 30px 20px;
-    width: 300px;
-    min-height: 120px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
+.Categories_container > div {
+  flex: 1 1 calc(33% - 20px);
+  background: gray;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.25em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.Categories_container img {
-    height: 80px;
-    width: auto;
+.Categories_container > div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
+.content_1 {background: #F8942A;}
+.content_2 {background: #FD2A7C;}
+.content_3 {background: #3810CC;}
 
-.content_1 {
-    background-color: #F8942A;
-}
-
-.content_2 {
-    background-color: #FD2A7C;
-}
-
-.content_3 {
-    background-color: #3810CC;
-}
-
-
-
-
-
-.Categories_h1 {
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 50px;
-    font-family: "Bebas Neue", sans-serif;
-    color: #333;
-}
-
+/* Product Cards */
 .Shoes_Categories {
-    display: flex;
-    gap: 25px;
-    justify-content: space-between;
-    align-items: stretch;
-    padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
-
 
 .Shoes_card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    border: 1px solid black;
-    padding: 20px;
-    text-align: left;
-    width: 400px;
-    min-width: 250px;
-    background-color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    font-family: "Bebas Neue", sans-serif;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.Shoes_card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
 
 .Shoes_image_container {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .Shoes_card img {
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-
 .Shoe_title {
-    font-size: 1.25em;
-    font-weight: 700;
-    margin: 10px 0;
-    color: #333333;
-    font-family: "Bebas Neue", sans-serif
+  font-size: 1.25em;
+  font-weight: 700;
+  margin: 10px 0;
 }
 
 .Shoe_description {
-    font-size: 0.85em;
-    color: #666;
-    margin-bottom: 20px;
-    flex-grow: 1;
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 20px;
+  flex-grow: 1;
 }
 
 .Shoe_price {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: auto;
-    margin-bottom: 15px;
-    color: #333;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-/* --- Button Styling --- */
 .Buy_button {
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 20px;
-    text-align: center;
-    border-radius: 4px;
-    font-size: 1em;
-    font-weight: 600;
-    display: block;
-    transition: background-color 0.3s;
+  text-decoration: none;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
 .Buy_button:hover {
-    background-color: #333;
+  background: #333;
 }
 
-
-
+/* Footer */
 .Footer_container {
-    margin-top: 150px;
-    width: auto;
-    height: 300px;
-    background-color: rgba(245, 245, 220, 0.603);
+  margin-top: 100px;
+  padding: 50px 20px;
+  background: rgba(245,245,220,0.6);
+  text-align: center;
 }
-
-.Footer_container h1 {
-    text-align: center;
-    font-size: 22px;
-    padding-top: 100px;
-    padding-bottom: 12px;
-
-}
-
-
-.Footer_container p {
-    text-align: center;
-    color: #0000008e;
-}
-
-
-
-#Footer_container {
-    display: flex;
-    justify-self: center;
-}
-
-
 
 #Footer_container form {
-    margin-top: 20px;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
-
-
 
 #Footer_container input {
-    padding: 20px;
-    width: 350px;
-    border-radius: 5px;
-    border: none;
+  flex: 1 1 250px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
 }
-
 
 #Footer_container button {
-    padding: 20px;
-    width: 100px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    font-weight: bold;
-    background-color: #d63031;
+  padding: 15px 25px;
+  border-radius: 5px;
+  border: none;
+  background: #d63031;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-
-
-
-
-
-
-
-
-
-/* Laptop (1025–1200px) */
-
-   /* hero section  */
-
-@media screen and (max-width: 1200px) {
-.all {
-    margin: 0 1px;
-    margin-bottom: 100px;
+#Footer_container button:hover {
+  background: #c12727;
 }
 
-    .header_content h1 {
-        font-size: 31px
-    }
-
-    .header_content p {
-        font-size: 14px;
-    }
-
-/* Categories */
-
-.Categories_container {
-    padding: 20px;
+/* Responsive */
+@media screen and (max-width:1024px){
+  #header_container {flex-direction: column; text-align: center;}
+  .Categories_container > div {flex: 1 1 45%;}
+  .Shoes_card {max-width: 45%;}
 }
 
-/* Shoes */
-
+@media screen and (max-width:768px){
+  .header_content h1 {font-size:2em;}
+  .header_content p {font-size:0.9em;}
+  .Categories_container > div {flex: 1 1 100%;}
+  .Shoes_card {max-width: 90%;}
 }
 
-/* Tablet (769–1024px) */
-
-   /* hero section  */
-
-@media screen and (max-width: 1024px) {
-    #header_container {
-        
-        text-align: center;
-        align-items: center;
-    }
-
-    .TV {
-        width: 350px;
-    }
-
-/* Categories */
-
-.Categories_container>div {
-    font-size: 25px;
-}
-
-/* Shoes */
-
-}
-
-/* Mobile Landscape (569–768px) */
-
-   /* hero section  */
-
-@media screen and (max-width: 768px) {
-      .header_content h1 {
-        font-size: 26px
-    }
-
-    #header_container {
-        flex-direction: column;
-    }
-
-    .header_content p {
-        font-size: 10px;
-    }
-
-/* Categories */
-
-.Categories_container>div {
-    font-size: 40px;
-}
-
-    .Categories_container {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    /* Shoes */
-
-.Shoes_Categories {
-    flex-direction: column;
-    align-items: center;
-}
-
-}
-
-
-/* Mobile Portrait (≤568px) */
-
-    /* hero section  */
-
-@media screen and (max-width: 568px) {
-    .TV {
-        width: 300px;
-    }
-
-/* Categories */
-/* Shoes */
-
-.Shoes_card {
-    width: 350px;
-}
-
-#Footer_container form {
-  flex-direction: column;
-  text-align: center;
-
-}
- 
-.btn {
-    margin-top: 10px;
-}
-
+@media screen and (max-width:568px){
+  .header_content h1 {font-size:1.5em;}
+  .header_content p {font-size:0.8em;}
+  .Shoes_card {max-width: 95%;}
+  #Footer_container form {flex-direction: column;}
 }
