@@ -29,8 +29,9 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding: 60px 50px 40px;
-  background: rgba(250,235,215,0.76);
+  background: rgba(250, 235, 215, 0.76);
   border-radius: 10px;
+  gap: 40px;
 }
 
 .header_content h1 {
@@ -47,7 +48,7 @@ body {
 .p_2 {
   font-weight: bold;
   font-size: 1.5em;
-  color: rgb(199,136,65);
+  color: rgb(199, 136, 65);
   margin-bottom: 10px;
 }
 
@@ -55,14 +56,19 @@ body {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background: rgb(199,136,65);
+  background: rgb(199, 136, 65);
   color: white;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .btn_1:hover {
-  background: rgb(180,120,50);
+  background: rgb(180, 120, 50);
+}
+
+.header_content-2 img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Categories */
@@ -81,7 +87,6 @@ body {
 
 .Categories_container > div {
   flex: 1 1 calc(33% - 20px);
-  background: gray;
   color: white;
   text-align: center;
   padding: 20px;
@@ -94,12 +99,17 @@ body {
 
 .Categories_container > div:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.content_1 {background: #F8942A;}
-.content_2 {background: #FD2A7C;}
-.content_3 {background: #3810CC;}
+.content_1 { background: #F8942A; }
+.content_2 { background: #FD2A7C; }
+.content_3 { background: #3810CC; }
+
+/* Section Titles */
+.Categories_h1 {
+  margin: 60px 0 20px;
+}
 
 /* Product Cards */
 .Shoes_Categories {
@@ -115,7 +125,7 @@ body {
   padding: 20px;
   max-width: 300px;
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -123,7 +133,7 @@ body {
 
 .Shoes_card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .Shoes_image_container {
@@ -134,7 +144,7 @@ body {
   margin-bottom: 15px;
 }
 
-.Shoes_card img {
+.Shoes_image_container img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -177,11 +187,11 @@ body {
 .Footer_container {
   margin-top: 100px;
   padding: 50px 20px;
-  background: rgba(245,245,220,0.6);
+  background: rgba(245, 245, 220, 0.6);
   text-align: center;
 }
 
-#Footer_container form {
+.footer_form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -189,44 +199,52 @@ body {
   margin-top: 20px;
 }
 
-#Footer_container input {
+.footer_form input {
   flex: 1 1 250px;
   padding: 15px;
   border-radius: 5px;
   border: none;
 }
 
-#Footer_container button {
+.footer_form button {
   padding: 15px 25px;
   border-radius: 5px;
   border: none;
   background: #d63031;
   color: white;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-#Footer_container button:hover {
+.footer_form button:hover {
   background: #c12727;
 }
 
 /* Responsive */
-@media screen and (max-width:1024px){
-  #header_container {flex-direction: column; text-align: center;}
-  .Categories_container > div {flex: 1 1 45%;}
-  .Shoes_card {max-width: 45%;}
+@media (max-width: 1024px) {
+  #header_container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Categories_container > div {
+    flex: 1 1 45%;
+  }
+
+  .Shoes_card {
+    max-width: 45%;
+  }
 }
 
-@media screen and (max-width:768px){
-  .header_content h1 {font-size:2em;}
-  .header_content p {font-size:0.9em;}
-  .Categories_container > div {flex: 1 1 100%;}
-  .Shoes_card {max-width: 90%;}
-}
+@media (max-width: 768px) {
+  .header_content h1 {
+    font-size: 2em;
+  }
 
-@media screen and (max-width:568px){
-  .header_content h1 {font-size:1.5em;}
-  .header_content p {font-size:0.8em;}
-  .Shoes_card {max-width: 95%;}
-  #Footer_container form {flex-direction: column;}
+  .Categories_container > div {
+    flex: 1 1 100%;
+  }
+
+  .Shoes_card {
+    max-width: 90%;
+  }
 }
